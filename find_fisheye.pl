@@ -21,7 +21,7 @@ until ($iterator->done) {
 
     my $info = ImageInfo($f->stringify);
     if ($info->{LensType} ne 'NO-LENS') {
-        say "nope, lense ".$f->basename;
+        say "nope, proper lense ".$f->basename;
         next;
     }
 
