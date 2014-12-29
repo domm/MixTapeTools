@@ -70,8 +70,7 @@ sub get_pair {
     my $left_num = $1;
     $right =~ /p(\d+)/;
     my $right_num = $1;
-    my $diff      = $left_num - $right_num;
-    $diff = $diff * -1 if $diff < 0;
+    my $diff      = abs($left_num - $right_num);
 
     if ( $diff > 50 ) {
         return $left, $right;
