@@ -16,7 +16,7 @@ while ( my $file = readdir($dir) ) {
 }
 
 my $font_filename = 'DejaVuSans.ttf';
-my $font = Imager::Font->new( file => $font_filename )
+my $font = Imager::Font->new( file => $font_filename, aa=>1 )
     or die "Cannot load $font_filename: ", Imager->errstr;
 
 my $text      = "der mensch gehört auf eine sofagarnitur";
